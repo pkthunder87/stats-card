@@ -1,0 +1,41 @@
+.stats-card {
+  height: 40vh;
+  width: 80vw;
+  background-color: var(--color-dark-desaturated-blue);
+  border-radius: 5px;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .card-left {
+    &__title {
+      color: var(--color-white);
+    }
+
+    &__details {
+    }
+
+    &__stats {
+      .heading {
+        color: var(--color-white);
+      }
+
+      .category {
+        color: var(--color-slightly-transparent-white-stat);
+      }
+    }
+  }
+
+  .card-right {
+    &__image {
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(hsl(283, 64%, 41%)),
+        url(../images/image-header-desktop.jpg);
+      display: block;
+      background-size: cover;
+      background-blend-mode: hard-light;
+    }
+  }
+}

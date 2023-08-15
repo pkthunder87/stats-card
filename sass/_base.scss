@@ -15,9 +15,9 @@
   // (main heading, stats)
   --color-white: hsl(0, 0%, 100%);
   //  (main paragraph)
-  --color-slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
-  //  (stat headings)
-  --color-slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+  --color-slightly-transparent-white-main: hsla(0, 0%, 100%, 0.75);
+  //  (stat paragraph)
+  --color-slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6);
 
   // ## Typography
 
@@ -26,6 +26,7 @@
   --font-family-header-text: "Inter", sans-serif;
 }
 
+// Universal Reset
 * {
   margin: 0;
   padding: 0;
@@ -42,6 +43,7 @@ html {
   font-size: 62.5%;
 }
 
+// General Styles
 body {
   height: 100vh;
   width: 100vw;
@@ -49,9 +51,17 @@ body {
   font-family: var(--font-family-body-text);
   font-size: 1.5rem;
   text-align: center;
+  color: var(--color-slightly-transparent-white-main);
+  -webkit-font-smoothing: antialiased;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  li {
+    list-style: none;
+  }
+
+  background-color: var(--color-very-dark-blue);
 }
