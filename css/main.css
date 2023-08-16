@@ -95,11 +95,8 @@ body li {
      -moz-column-gap: 4.4rem;
           column-gap: 4.4rem;
 }
-.stats-card .card-left__stats--2 {
-  margin-left: 0.2rem;
-}
 .stats-card .card-left__stats--3 {
-  margin-left: -0.9rem;
+  margin-left: -0.8rem;
 }
 .stats-card .card-left__stats .heading {
   color: var(--color-white);
