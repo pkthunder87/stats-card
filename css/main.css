@@ -55,6 +55,12 @@ body {
           align-items: center;
   background-color: var(--color-very-dark-blue);
 }
+@media only screen and (max-width: 27.5em) {
+  body {
+    height: auto;
+    width: 100vw;
+  }
+}
 body li {
   list-style: none;
 }
@@ -76,7 +82,7 @@ body li {
 @media only screen and (max-width: 27.5em) {
   .stats-card {
     margin-top: 2rem;
-    height: 900px;
+    height: 856px;
     width: 337.5px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
