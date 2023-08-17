@@ -91,21 +91,16 @@
   }
 
   .card-right {
-    &__image {
+    background-color: var(--color-soft-violet);
+
+    img {
       height: 100%;
       width: 100%;
-      background-image: linear-gradient(hsl(285, 64%, 40%)),
-        url(../images/image-header-desktop.jpg);
-      display: block;
-      background-size: cover;
-      background-blend-mode: hard-light;
-      filter: brightness(75%);
+      mix-blend-mode: multiply;
+      opacity: 75%;
     }
 
     @include base.query(base.$bp-phone) {
-      background-image: linear-gradient(hsl(285, 64%, 40%)),
-        url(../images/image-header-mobile.jpg);
-      background-size: cover;
       order: -1;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;

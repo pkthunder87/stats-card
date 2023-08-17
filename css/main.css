@@ -160,22 +160,17 @@ body li {
   font-size: 1.2rem;
   letter-spacing: 1px;
 }
-.stats-card .card-right__image {
+.stats-card .card-right {
+  background-color: var(--color-soft-violet);
+}
+.stats-card .card-right img {
   height: 100%;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(285, 64%, 40%))), url(../images/image-header-desktop.jpg);
-  background-image: linear-gradient(hsl(285, 64%, 40%)), url(../images/image-header-desktop.jpg);
-  display: block;
-  background-size: cover;
-  background-blend-mode: hard-light;
-  -webkit-filter: brightness(75%);
-          filter: brightness(75%);
+  mix-blend-mode: multiply;
+  opacity: 75%;
 }
 @media only screen and (max-width: 27.5em) {
   .stats-card .card-right {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(285, 64%, 40%))), url(../images/image-header-mobile.jpg);
-    background-image: linear-gradient(hsl(285, 64%, 40%)), url(../images/image-header-mobile.jpg);
-    background-size: cover;
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
