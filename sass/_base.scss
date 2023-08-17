@@ -1,3 +1,17 @@
+/////////////////////////
+// Sass
+
+// Variables
+$bp-phone: 27.5em; // 440px
+
+// Mixins
+@mixin query($bp-phone) {
+  @media only screen and (max-width: $bp-phone) {
+    @content;
+  }
+}
+
+////////////////////////
 // CSS Custom Properties
 :root {
   // ## Colors
@@ -41,6 +55,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @include query($bp-phone) {
+    font-size: 65%;
+  }
 }
 
 // General Styles
@@ -64,4 +82,8 @@ body {
   }
 
   background-color: var(--color-very-dark-blue);
+
+  @include query($bp-phone) {
+    text-align: center;
+  }
 }

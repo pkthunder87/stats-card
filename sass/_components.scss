@@ -1,3 +1,5 @@
+@use "base";
+
 .stats-card {
   height: 44.5rem;
   width: 111rem;
@@ -8,11 +10,24 @@
   display: grid;
   grid-template-columns: 1.02fr 0.98fr;
 
+  @include base.query(base.$bp-phone) {
+    margin-top: 2rem;
+    height: 900px;
+    width: 337.5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    overflow: visible;
+  }
+
   .card-left {
     padding: 7.2rem 10rem 7.2rem 7.1rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    @include base.query(base.$bp-phone) {
+      padding: 3rem;
+    }
 
     &__title {
       color: var(--color-white);
@@ -21,6 +36,11 @@
 
       span {
         color: var(--color-soft-violet);
+      }
+
+      @include base.query(base.$bp-phone) {
+        font-size: 2.6rem;
+        margin-top: 1rem;
       }
     }
 
@@ -36,11 +56,22 @@
       margin-top: 4.1rem;
       column-gap: 4.4rem;
 
+      @include base.query(base.$bp-phone) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 2.5rem;
+        margin-top: 1rem;
+      }
+
       &--2 {
       }
 
       &--3 {
         margin-left: -0.8rem;
+
+        @include base.query(base.$bp-phone) {
+          margin-left: 0;
+        }
       }
 
       .heading {
@@ -69,6 +100,16 @@
       background-size: cover;
       background-blend-mode: hard-light;
       filter: brightness(75%);
+    }
+
+    @include base.query(base.$bp-phone) {
+      background-image: linear-gradient(hsl(285, 64%, 40%)),
+        url(../images/image-header-mobile.jpg);
+      background-size: cover;
+      order: -1;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      overflow: hidden;
     }
   }
 }

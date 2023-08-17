@@ -26,6 +26,11 @@ html {
           box-sizing: border-box;
   font-size: 62.5%;
 }
+@media only screen and (max-width: 27.5em) {
+  html {
+    font-size: 65%;
+  }
+}
 
 body {
   height: 100vh;
@@ -53,6 +58,11 @@ body {
 body li {
   list-style: none;
 }
+@media only screen and (max-width: 27.5em) {
+  body {
+    text-align: center;
+  }
+}
 
 .stats-card {
   height: 44.5rem;
@@ -62,6 +72,16 @@ body li {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1.02fr 0.98fr;
+}
+@media only screen and (max-width: 27.5em) {
+  .stats-card {
+    margin-top: 2rem;
+    height: 900px;
+    width: 337.5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    overflow: visible;
+  }
 }
 .stats-card .card-left {
   padding: 7.2rem 10rem 7.2rem 7.1rem;
@@ -74,6 +94,11 @@ body li {
           flex-direction: column;
   gap: 3rem;
 }
+@media only screen and (max-width: 27.5em) {
+  .stats-card .card-left {
+    padding: 3rem;
+  }
+}
 .stats-card .card-left__title {
   color: var(--color-white);
   font-family: var(--font-family-header-text);
@@ -81,6 +106,12 @@ body li {
 }
 .stats-card .card-left__title span {
   color: var(--color-soft-violet);
+}
+@media only screen and (max-width: 27.5em) {
+  .stats-card .card-left__title {
+    font-size: 2.6rem;
+    margin-top: 1rem;
+  }
 }
 .stats-card .card-left__details {
   line-height: 1.7em;
@@ -95,8 +126,21 @@ body li {
      -moz-column-gap: 4.4rem;
           column-gap: 4.4rem;
 }
+@media only screen and (max-width: 27.5em) {
+  .stats-card .card-left__stats {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 1rem;
+  }
+}
 .stats-card .card-left__stats--3 {
   margin-left: -0.8rem;
+}
+@media only screen and (max-width: 27.5em) {
+  .stats-card .card-left__stats--3 {
+    margin-left: 0;
+  }
 }
 .stats-card .card-left__stats .heading {
   color: var(--color-white);
@@ -121,19 +165,27 @@ body li {
   -webkit-filter: brightness(75%);
           filter: brightness(75%);
 }
+@media only screen and (max-width: 27.5em) {
+  .stats-card .card-right {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(285, 64%, 40%))), url(../images/image-header-mobile.jpg);
+    background-image: linear-gradient(hsl(285, 64%, 40%)), url(../images/image-header-mobile.jpg);
+    background-size: cover;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+  }
+}
 
 .attribution {
   font-size: 11px;
   text-align: center;
   position: absolute;
-  bottom: 8rem;
+  bottom: 14rem;
 }
-@media only screen and (max-width: 950px) {
-  .attribution {
-    bottom: 4rem;
-  }
-}
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 27.5em) {
   .attribution {
     position: static;
   }
