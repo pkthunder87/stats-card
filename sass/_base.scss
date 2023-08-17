@@ -3,10 +3,18 @@
 
 // Variables
 $bp-phone: 27.5em; // 440px
+$bp-tablet: 50em; // 800px
+$bp-laptop: 65em; // 1040px
 
 // Mixins
 @mixin query($bp-phone) {
   @media only screen and (max-width: $bp-phone) {
+    @content;
+  }
+}
+
+@mixin queryHeight($breakpoint-height) {
+  @media only screen and (max-height: $bp-tablet) {
     @content;
   }
 }
@@ -65,6 +73,11 @@ html {
 body {
   height: 100vh;
   width: 100vw;
+
+  @include query($bp-laptop) {
+    height: 100vh;
+    width: fit-content;
+  }
 
   @include query($bp-phone) {
     height: auto;

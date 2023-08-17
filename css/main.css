@@ -55,6 +55,14 @@ body {
           align-items: center;
   background-color: var(--color-very-dark-blue);
 }
+@media only screen and (max-width: 65em) {
+  body {
+    height: 100vh;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 @media only screen and (max-width: 27.5em) {
   body {
     height: auto;
@@ -186,7 +194,12 @@ body li {
   position: absolute;
   bottom: 14rem;
 }
-@media only screen and (max-width: 27.5em) {
+@media only screen and (max-height: 50em) {
+  .attribution {
+    position: static;
+  }
+}
+@media only screen and (max-width: 65em) {
   .attribution {
     position: static;
   }
