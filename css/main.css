@@ -194,7 +194,7 @@ body li {
   position: absolute;
   bottom: 14rem;
 }
-@media only screen and (max-height: 50em) {
+@media only screen and (max-height: 49.5em) {
   .attribution {
     position: static;
   }
